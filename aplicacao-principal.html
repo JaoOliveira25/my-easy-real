@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/script.js" defer></script>
+    <title>Controle De Finanças</title>
+</head>
+<body>
+    <main>
+
+        <div class="profile-container">
+            <div class="profile-photo">
+                    <img src="assets/blank-profile-picture.png" alt="">
+            </div>
+    
+            <div class="campo-nome">
+                <span class="profile-name"></span>
+                <button id="open-modal">Editar Perfil</button>
+            </div>
+
+            <div class="botaoSair">
+                <button onclick="sair()" id="btnSair">Sair</button>
+            </div>
+        </div>
+
+        <div id="fade" class="hide">
+            <!-- overley que fica no fundo que faz o contéudo ser exibido  com opacidade focando no modal-->
+              
+            </div>
+        
+            
+                <div id="modal" class="hide">
+                    <!-- Modal que vai ficar oculta até que o usuário clique no botão  e volta a ficar oculto 
+                     quando o usuário clicar no botão fechar -->
+
+                        <div id="msgAtualiza"></div>
+                        <div class="modal-header">
+                            <h2>Atualização cadastral</h2>
+                            <button id="close-modal">Fechar</button>
+                        </div>
+    
+                        <div class="modal-body">
+                            <div class="label-float">
+                                <input type="text" id="nome" placeholder='' >
+                                <label for="nome" id="labelNome">Nome</label>
+                            </div>
+                
+                            <div class="label-float">
+                                <input type="text" id="usuario" placeholder=''>
+                                <label for="usuario" id="labelUsuario">Usuario</label>
+                            </div>
+                
+                            <div class="label-float">
+                                <input type="password" id="senha" placeholder=''>
+                                <label for="senha" id="labelSenha">Senha</label>
+                                <i class="fa fa-eye" aria-hidden="true" id="olhoSenha"></i>
+                            </div>
+                
+                            <div class="justify-center">
+                                <button onclick="editar()" id="btnEditar">Editar</button>
+                            </div>
+                        </div>
+                    </div>
+
+        <div class="resume">
+            <div>
+                Entradas: R$ 
+                <span class="incomes">0.00</span>
+            </div>
+            <div>
+                Saídas: R$ 
+                <span class="expenses">0.00</span>
+            </div>
+            <div>
+                Saldo: R$ 
+                <span class="total">0.00</span>
+            </div>
+        </div>
+
+        <div class="newItem">
+            <div class="divDesc">
+                <label for="desc">Descrição</label>
+                <input type="text" id="desc">
+            </div>
+            <div class="divAmount">
+                <label for="amount">Valor</label>
+                <input type="number" id="amount">
+            </div>
+            <div class="divType">
+                <label for="type">Tipo</label>
+                <select id="type">
+                    <option>Entrada</option>
+                    <option>Saída</option>
+                </select>
+            </div>
+            <button id="btnNew">Incluir</button>
+        </div>
+
+        <div class="divTable"><!--Aqui vai ficar o as colunas de cada valor-->
+            <table>
+                <thead><!--Essa tag agrupa o cabeçalho de uma tabela-->
+                    <tr>
+                        <th>Descrição</th>
+                        <th class="columnAmount">Valor</th>
+                        <th class="columnType">Tipo</th>
+                        <th class="columnAction"></th>
+                    </tr>
+                </thead>
+                <tbody><!-- Contém o corpo da tabela, onde os dados principais são inseridos. -->
+                    <!-- Alimentaremos esse tbody no js. -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

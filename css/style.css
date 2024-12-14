@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'popins', sans-serif;
+    outline: none;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #0D6F73;
+}
+
+main{
+    max-width: 550px;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FCF3E3;
+    margin: 25px 0px 25px 0px;
+    border-radius: 10px;
+}
+
+#msgAtualiza{
+    text-align: center;
+    background-color: #80e6e9;
+    color: #0d6f73;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 4px;
+    display: none;
+}
+
+.profile-container{
+	text-align: center;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    background-color: #fcf3e3;
+    
+}
+
+.profile-photo{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+    border: solid #0d6f73;
+
+}
+
+#open-modal:hover{
+    opacity: 0.8;
+}
+
+.profile-photo img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.profile-name{
+    font-family: system-ui;
+	margin-top: 10px;
+	font-size:18px;
+	color:#0d6f73;
+    
+}
+
+.campo-nome{
+    height: 100px;
+    padding-top: 15px;
+}
+
+button#open-modal
+{
+    display: block;
+    margin-top: 13px;
+    padding: .6rem 1.2rem;
+    background-color: #0d6f73;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    opacity: .9;
+    font-size: 1rem;
+    transition: 0.5s;    
+}
+
+.botaoSair{
+    margin-left: 5px;
+}
+button#btnSair
+{
+    display: block;
+    margin-top: 13px;
+    padding: .6rem 1.2rem;
+    background-color: #0d6f73;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    opacity: .9;
+    font-size: 1rem;
+    transition: 0.5s;    
+}
+
+button#close-modal{
+    padding: .6rem 1.2rem;
+    background-color: #e1ede9;
+    color: #211217;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    opacity: .9;
+    font-size: 1rem;
+    transition: 0.5s;    
+}
+
+
+#btnEditar{
+    padding: .6rem 1.2rem;
+    background-color: #0d6f73;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    opacity: .9;
+    font-size: 1rem;
+    transition: 0.5s;    
+}
+
+#fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#fade, #modal{
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
+
+#modal{
+    position: fixed;
+    background-color: #fcf3e3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    width: 500px;
+    max-width: 90%;
+    padding: 30px;
+    border-radius: .5rem;
+
+}
+
+#olhoSenha{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    color: rgb(36, 35, 35);
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.label-float input{
+    color: black;
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom:2px solid rgb(98, 92, 92);
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+    gap: 5px;
+    
+}
+
+.label-float{
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+
+.label-float label{
+    color: black;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+
+
+.label-float input:focus + label,
+.label-float input:valid + label{
+    font-size: 13px;
+    margin-top: 0;
+    color: black;
+}
+
+#modal.hide,
+#fade.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.resume{
+    
+    display: flex;
+    padding: 10px 0;
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.resume>div{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px #ccc;
+    padding: 4%;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.newItem{
+    
+    display: flex;
+    align-items: end;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.newItem>div{
+    display: flex;
+    flex-direction: column;
+}
+
+.newItem>button{
+    background-color: #0D6F73;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 30px;
+
+}
+
+input, select {
+    padding: 5px;
+}
+
+.divTable{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+   
+    width: 98%;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+th{
+    text-align: start;
+    border-radius: inset;
+    padding-bottom: 5px;
+}
+
+i{
+    font-size: 25px;
+}
+
+.bxs-chevron-up{
+    color: green;
+}
+
+.bxs-chevron-down{
+    color: red;
+}
+
+.columnAction{
+    width: 40px;
+    text-align: center;
+}
+
+.columnAction>button{
+    background: transparent;
+    border: none;
+}
+
+.columnAmount{
+    width: 30%;
+
+}
+
+.columnType{
+    width: 80px;
+    text-align: center;
+}
