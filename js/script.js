@@ -43,22 +43,22 @@ function editar(){
     localStorage.setItem('listaUsuarios', JSON.stringify(listaUsuarios));
     msgAtualiza.setAttribute('style','display: block;');
     msgAtualiza.innerHTML = "Atualizando cadastro...";
-    
+
     setTimeout(()=>{
-        window.location.href = 'http://127.0.0.1:5500/aplicacao-principal.html';
+        window.location.href = 'https://jaooliveira25.github.io/my-easy-real/aplicacao-principal.html';
     },2000);
    
 }
 
 if(localStorage.getItem('token')==null){
     alert('Você precisa estar logado para acessar essa página');
-    window.location.href = 'http://127.0.0.1:5500/index.html';
+    window.location.href = 'https://jaooliveira25.github.io/my-easy-real/index.html';
 }
 
 function sair(){
     localStorage.removeItem('token');
     localStorage.removeItem('userLogado');
-    window.location.href = 'http://127.0.0.1:5500/index.html';
+    window.location.href = 'https://jaooliveira25.github.io/my-easy-real/index.html';
 }
 
 document.addEventListener("DOMContentLoaded", () => {

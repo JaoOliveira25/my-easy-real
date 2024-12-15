@@ -144,10 +144,13 @@ btnCadatrar.addEventListener('click',()=>{
       e armazena no localStorage onde pode ser resgato pela chave 'listaUsuarios'*/
   
            msgSuccesCad.style ='display: block;';
-           msgSuccesCad.innerHTML = '<strong>Usuário cadastrado com sucesso!</strong>';
+           msgSuccesCad.innerHTML = '<strong>Cadastrando usuário ...</strong>';
            msgErrorCad.style ='display: none;';
            msgErrorCad.innerHTML = '';
-  
+
+           setTimeout(()=>{
+            window.location.href = 'https://jaooliveira25.github.io/my-easy-real/index.html';
+           },3000);
 
      }else{
            msgErrorCad.style = 'display: block;'
@@ -158,9 +161,4 @@ btnCadatrar.addEventListener('click',()=>{
 })
 
 
-/*
-function cadastrar(){
-   
-    
-}
-*/
+

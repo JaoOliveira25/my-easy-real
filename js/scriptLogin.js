@@ -50,7 +50,7 @@ function entrar(){
         usuario.focus();
     }else{
         if(usuario.value == userValid.user && senha.value == userValid.senha ){
-            window.location.href = 'http://127.0.0.1:5500/aplicacao-principal.html';
+            window.location.href = 'https://jaooliveira25.github.io/my-easy-real/aplicacao-principal.html';
     
             let token = Math.random().toString(16).substring(2);
             
