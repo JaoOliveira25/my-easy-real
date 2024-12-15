@@ -149,7 +149,7 @@ btnCadatrar.addEventListener('click',()=>{
            msgErrorCad.innerHTML = '';
 
            setTimeout(()=>{
-            window.location.href = 'https://jaooliveira25.github.io/my-easy-real/index.html';
+            window.location.href = 'https://jaooliveira25.github.io/my-easy-real/';
            },3000);
 
      }else{
