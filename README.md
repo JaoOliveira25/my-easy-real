@@ -1,4 +1,5 @@
-#My Easy Real - Sistema de Gestão de Finanças Pessoais
+My Easy Real - Sistema de Gestão de Finanças Pessoais
+
 My Easy Real é um sistema de gestão de finanças pessoais criado como um projeto pessoal para aplicar os conhecimentos adquiridos em Front-End com JavaScript puro. A aplicação tem como objetivo ajudar os usuários a controlarem suas finanças pessoais, registrando entradas e saídas de dinheiro, além de permitir a edição de dados do perfil.
 
 Funcionalidades
